@@ -1,0 +1,191 @@
+@import "./config";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+}
+
+.card.dark {
+  background: $very-dark-desaturated-blue;
+  color: hsl(233, 11%, 84%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(233, 11%, 84%);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  // padding-top: 5%;
+
+  .container {
+    width: 100%;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    // grid-template-rows: 0.5fr 0.25fr 2fr;
+
+    .hero-img {
+      // @include background($light-mobile-background);
+      position: absolute;
+      width: 100vw;
+      height: 40%;
+      z-index: -1;
+      background-position: top;
+    }
+
+    .header-area {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15%;
+      margin-bottom: 1.75rem;
+      width: 90%;
+
+      h1 {
+        letter-spacing: 1rem;
+        display: flex;
+        align-items: center;
+        color: white;
+      }
+
+      button {
+        background: none;
+        border: none;
+      }
+    }
+
+    .todo-form {
+      display: grid;
+      grid-template-columns: 0.6fr 2fr;
+      border-radius: 5px;
+      height: 3.5rem;
+      padding: 0 0.5rem;
+      width: 90%;
+
+      button {
+        background: none;
+        border: none;
+      }
+
+      input {
+        background: none;
+        border: none;
+        font-size: 0.9rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .todo-form.dark {
+      input {
+        color: hsl(234, 39%, 85%);
+      }
+    }
+
+    .list-items-area {
+      margin-top: 7.5%;
+      border-radius: 5px;
+      background-color: white;
+      border-radius: 5px;
+      width: 90%;
+
+      ul {
+        width: 100%;
+        border-radius: 5px;
+
+        .list-item {
+          height: 3.5rem;
+          display: grid;
+          grid-template-columns: 0.4fr 1fr 0.2fr;
+          border-bottom: 0.25px solid $light-grayish-blue;
+          border-radius: 0px;
+          // padding: 0 0.5rem;
+          // border-radius: 5px;
+
+          p {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+          }
+
+          .delete-button {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+
+          .delete-button.dark {
+            background: $very-dark-desaturated-blue;
+          }
+
+          button {
+            border: none;
+            outline: none;
+            background-color: white;
+            font-size: 1rem;
+          }
+        }
+
+        .list-item.dark {
+          background: $very-dark-desaturated-blue;
+          border-bottom: 0.5px solid $dark-grayish-blue;
+
+          // p.dark {
+          //   color: hsl(234, 39%, 85%);
+          // }
+        }
+      }
+
+      .filtered-todos {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+
+        align-items: center;
+        height: 3.5rem;
+      }
+    }
+  }
+
+  .list-items-area.dark {
+    background-color: $very-dark-desaturated-blue;
+  }
+
+  .checkbox {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: auto;
+    cursor: pointer;
+
+    .check-icon {
+      padding-top: 5px;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@import "./queries";

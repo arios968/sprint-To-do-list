@@ -1,0 +1,63 @@
+@import "./config";
+
+@media (min-width: 567.98px) {
+  #root {
+    .container {
+      .hero-img {
+        height: 45%;
+      }
+
+      width: 70%;
+
+      .header-area {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 767.98px) {
+  #root {
+    .container {
+      .hero-img {
+        height: 30%;
+        // background-image: $light-desktop-background;
+      }
+
+      .header-area {
+        margin-bottom: 0px;
+      }
+
+      .todo-form {
+        margin-top: 5%;
+        height: 4rem;
+      }
+
+      .list-items-area {
+        margin-top: 10%;
+
+        .list-item {
+          height: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 991.98px) {
+  #root {
+    .container {
+      width: 50%;
+
+      .hero-img {
+        height: 40%;
+      }
+    }
+  }
+}
+
+// trying out dark theme in css

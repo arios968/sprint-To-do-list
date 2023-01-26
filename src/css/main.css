@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card {
+  height: 100%;
+  background: white;
+  border-radius: 5px;
+}
+
+.card.dark {
+  background: #25273c;
+  color: #d2d3db;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #d2d3db;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#root .container {
+  width: 100%;
+  max-height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+#root .container .hero-img {
+  position: absolute;
+  width: 100vw;
+  height: 40%;
+  z-index: -1;
+  background-position: top;
+}
+
+#root .container .header-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15%;
+  margin-bottom: 1.75rem;
+  width: 90%;
+}
+
+#root .container .header-area h1 {
+  letter-spacing: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+#root .container .header-area button {
+  background: none;
+  border: none;
+}
+
+#root .container .todo-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.6fr 2fr;
+      grid-template-columns: 0.6fr 2fr;
+  border-radius: 5px;
+  height: 3.5rem;
+  padding: 0 0.5rem;
+  width: 90%;
+}
+
+#root .container .todo-form button {
+  background: none;
+  border: none;
+}
+
+#root .container .todo-form input {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+}
+
+#root .container .todo-form input:focus {
+  outline: none;
+}
+
+#root .container .todo-form.dark input {
+  color: #cacde8;
+}
+
+#root .container .list-items-area {
+  margin-top: 7.5%;
+  border-radius: 5px;
+  background-color: white;
+  border-radius: 5px;
+  width: 90%;
+}
+
+#root .container .list-items-area ul {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#root .container .list-items-area ul .list-item {
+  height: 3.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.4fr 1fr 0.2fr;
+      grid-template-columns: 0.4fr 1fr 0.2fr;
+  border-bottom: 0.25px solid #d2d3db;
+  border-radius: 0px;
+}
+
+#root .container .list-items-area ul .list-item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+
+#root .container .list-items-area ul .list-item .delete-button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#root .container .list-items-area ul .list-item .delete-button.dark {
+  background: #25273c;
+}
+
+#root .container .list-items-area ul .list-item button {
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 1rem;
+}
+
+#root .container .list-items-area ul .list-item.dark {
+  background: #25273c;
+  border-bottom: 0.5px solid #9394a5;
+}
+
+#root .container .list-items-area .filtered-todos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3.5rem;
+}
+
+#root .list-items-area.dark {
+  background-color: #25273c;
+}
+
+#root .checkbox {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin: auto;
+  cursor: pointer;
+}
+
+#root .checkbox .check-icon {
+  padding-top: 5px;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 567.98px) {
+  #root .container {
+    width: 70%;
+  }
+  #root .container .hero-img {
+    height: 45%;
+  }
+  #root .container .header-area {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 767.98px) {
+  #root .container .hero-img {
+    height: 30%;
+  }
+  #root .container .header-area {
+    margin-bottom: 0px;
+  }
+  #root .container .todo-form {
+    margin-top: 5%;
+    height: 4rem;
+  }
+  #root .container .list-items-area {
+    margin-top: 10%;
+  }
+  #root .container .list-items-area .list-item {
+    height: 4rem;
+  }
+}
+
+@media (min-width: 991.98px) {
+  #root .container {
+    width: 50%;
+  }
+  #root .container .hero-img {
+    height: 40%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
