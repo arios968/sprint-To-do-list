@@ -1,5 +1,5 @@
 import React from "react";
-import TodoItem from "./TodoItem";
+
 import { useState } from "react";
 import TodoFunctions from "../TodoFunctions";
 import { useContext } from "react";
